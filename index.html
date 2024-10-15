@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas Médicas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>Reservas Médicas</h1>
+
+    <div class="container">
+        <form id="formReserva">
+            <div>
+                <label for="nombrePaciente">Nombre del Paciente:</label>
+                <input type="text" id="nombrePaciente" placeholder="Nombre completo del paciente" required>
+            </div>
+
+            <div>
+                <label for="especialidad">Especialidad:</label>
+                <select id="especialidad" required>
+                    <option value="">Seleccione una especialidad</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="medico">Médico:</label>
+                <select id="medico" required>
+                    <option value="">Seleccione un médico</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="horario">Horario:</label>
+                <select id="horario" required>
+                    <option value="">Seleccione un horario</option>
+                </select>
+            </div>
+
+            <button type="submit">Reservar Cita</button>
+        </form>
+
+        <div class="results">
+            <h2>Búsqueda de Reservas</h2>
+            <input type="text" id="buscarNombrePaciente" placeholder="Nombre del paciente">
+            <button id="buscarReservaBtn">Buscar Reserva</button>
+            <p id="resultadoBusqueda"></p>
+
+            <h2>Cancelar Reserva</h2>
+            <input type="text" id="cancelarNombrePaciente" placeholder="Nombre del paciente">
+            <button id="cancelarReservaBtn">Cancelar Reserva</button>
+        </div>
+
+        <div class="results">
+            <h2>Filtrar Reservas por Especialidad</h2>
+            <select id="filtrarEspecialidad">
+                <option value="">Seleccione una especialidad</option>
+            </select>
+            <button id="filtrarReservaBtn">Filtrar</button>
+            <p id="resultadoFiltro"></p>
+        </div>
+    </div>
+
+    <script src="./main.js"> </script>
+
+</body>
+</html>
